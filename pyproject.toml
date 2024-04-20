@@ -9,6 +9,18 @@ packages = [{include = "career_guru"}]
 [tool.poetry.dependencies]
 python = "^3.12"
 
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+extend-select = [
+    "E501",
+    "D",
+    "I"
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
 
 [tool.poetry.group.dev.dependencies]
 fastapi = "^0.110.2"
