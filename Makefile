@@ -1,14 +1,17 @@
-run:
+up:
 	docker-compose up -d --build
 
-stop:
+down:
 	docker-compose down --volumes
 
-local-run:
+local-up:
 	poetry run uvicorn app.main:app --reload --port 8000
 
 lint:
 	poetry run ruff format && poetry run ruff check
 
-types:
+lint-fix:
+	poetry run ruff format && poetry run ruff check --fix
+
+type:
 	poetry run mypy . --strict
