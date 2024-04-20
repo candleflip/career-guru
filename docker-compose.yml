@@ -5,5 +5,5 @@ services:
     container_name: web
     ports:
       - "8000:8000"
-    environment:
-      - ENVIRONMENT=dev
+    env_file:
+      - .env
