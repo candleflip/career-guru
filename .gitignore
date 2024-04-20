@@ -1,2 +1,7 @@
 .idea
+
 .venv
+.env
+
+.mypy_cache
+.ruff_cache
