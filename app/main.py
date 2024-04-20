@@ -6,9 +6,9 @@ from app.api import health_check
 
 
 def create_application() -> FastAPI:
-    """Creates root application.
+    """Create root application.
 
-    Collects all routes
+    Collect all routes
 
     Returns:
         Ready to run application
