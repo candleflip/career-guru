@@ -9,3 +9,6 @@ local-run:
 
 lint:
 	poetry run ruff format && poetry run ruff check
+
+types:
+	poetry run mypy . --strict
