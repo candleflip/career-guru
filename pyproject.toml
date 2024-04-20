@@ -9,6 +9,13 @@ packages = [{include = "career_guru"}]
 [tool.poetry.dependencies]
 python = "^3.12"
 
+[tool.poetry.group.dev.dependencies]
+fastapi = "^0.110.2"
+uvicorn = "^0.29.0"
+ruff = "^0.4.1"
+commitizen = "^3.24.0"
+mypy = "^1.9.0"
+
 [tool.ruff]
 line-length = 120
 
@@ -27,12 +34,6 @@ convention = "google"
 
 [tool.ruff.format]
 line-ending = "lf"
-
-[tool.poetry.group.dev.dependencies]
-fastapi = "^0.110.2"
-uvicorn = "^0.29.0"
-ruff = "^0.4.1"
-commitizen = "^3.24.0"
 
 [build-system]
 requires = ["poetry-core"]
