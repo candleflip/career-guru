@@ -22,6 +22,9 @@ extend-select = [
 [tool.ruff.lint.pydocstyle]
 convention = "google"
 
+[tool.ruff.lint.extend-per-file-ignores]
+"__init__.py" = ["D104"]
+
 [tool.ruff.format]
 line-ending = "lf"
 
