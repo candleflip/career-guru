@@ -3,7 +3,7 @@
 from fastapi import FastAPI
 
 from app.api import health_check
-from app.db import initialize_database
+from app.init_db import initialize_database
 
 
 def create_application() -> FastAPI:
