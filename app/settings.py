@@ -17,6 +17,7 @@ class Settings(BaseSettings):
     """
 
     environment: str = Field(default="dev")
+    db_url: str = Field()
 
 
 @lru_cache()
