@@ -26,4 +26,5 @@ app = create_application()
 
 @app.on_event("startup")
 def startup_event() -> None:
+    """Run instructions on app startup."""
     initialize_database(app=app)

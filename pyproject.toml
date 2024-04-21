@@ -27,6 +27,7 @@ extend-select = [
     "D",
     "I"
 ]
+ignore = ["D105"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
