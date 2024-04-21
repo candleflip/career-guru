@@ -1,5 +1,5 @@
-from tortoise.contrib.fastapi import register_tortoise
 from fastapi import FastAPI
+from tortoise.contrib.fastapi import register_tortoise
 
 from app.settings import Settings, get_settings
 
@@ -9,14 +9,15 @@ def initialize_database(app: FastAPI, settings: Settings = get_settings()) -> No
         app=app,
         db_url=settings.db_url,
         modules={
-            'models': [
-                'app.models.tortoise.vacancy',
-                'app.models.tortoise.employer',
+            "models": [
+                "app.models.tortoise.vacancy",
+                "app.models.tortoise.employer",
             ]
         },
         generate_schemas=True,
-        add_exception_handlers=True
+        add_exception_handlers=True,
     )
+
 
 # TODO: update when db initializing needed
 # from tortoise import Tortoise, connections, run_async
