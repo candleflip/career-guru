@@ -16,6 +16,7 @@ uvicorn = "^0.29.0"
 ruff = "^0.4.1"
 commitizen = "^3.24.0"
 mypy = "^1.9.0"
+tortoise-orm = "^0.20.0"
 
 [tool.ruff]
 line-length = 120
@@ -26,6 +27,7 @@ extend-select = [
     "D",
     "I"
 ]
+ignore = ["D105"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"

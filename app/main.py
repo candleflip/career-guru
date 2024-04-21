@@ -3,6 +3,7 @@
 from fastapi import FastAPI
 
 from app.api import health_check
+from app.db import initialize_database
 
 
 def create_application() -> FastAPI:
@@ -21,3 +22,9 @@ def create_application() -> FastAPI:
 
 
 app = create_application()
+
+
+@app.on_event("startup")
+def startup_event() -> None:
+    """Run instructions on app startup."""
+    initialize_database(app=app)

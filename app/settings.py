@@ -17,10 +17,11 @@ class Settings(BaseSettings):
     """
 
     environment: str = Field(default="dev")
+    db_url: str = Field()
 
 
 @lru_cache()
-def get_settings() -> BaseSettings:
+def get_settings() -> Settings:
     """Configure app settings.
 
     Returns:
