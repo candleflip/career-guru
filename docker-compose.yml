@@ -1,5 +1,13 @@
 services:
 
+  web-db:
+    build: ./database
+    container_name: web-db
+    expose:
+      - 5432
+    env_file:
+      - .env
+
   web:
     build: .
     container_name: web
@@ -7,3 +15,5 @@ services:
       - "8000:8000"
     env_file:
       - .env
+    depends_on:
+      - web-db
