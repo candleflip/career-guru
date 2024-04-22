@@ -3,6 +3,8 @@ services:
   web-db:
     build: ./database
     container_name: web-db
+    volumes:
+      - db-data:/var/lib/postgresql/data
     expose:
       - 5432
     env_file:
@@ -17,3 +19,7 @@ services:
       - .env
     depends_on:
       - web-db
+
+volumes:
+  db-data:
+    name: db-data
