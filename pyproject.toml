@@ -10,6 +10,7 @@ packages = [{include = "career_guru"}]
 python = "^3.12"
 pydantic-settings = "^2.2.1"
 aerich = "^0.7.2"
+asyncpg = "^0.29.0"
 
 [tool.poetry.group.dev.dependencies]
 fastapi = "^0.110.2"
