@@ -23,7 +23,7 @@ TORTOISE_ORM = {
 }
 
 
-def initialize_database(app: FastAPI) -> None:
+def prepare_database_for_app(app: FastAPI) -> None:
     """Initialize database for the FastAPI app.
 
     Args:
