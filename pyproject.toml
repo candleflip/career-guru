@@ -9,6 +9,7 @@ packages = [{include = "career_guru"}]
 [tool.poetry.dependencies]
 python = "^3.12"
 pydantic-settings = "^2.2.1"
+aerich = "^0.7.2"
 
 [tool.poetry.group.dev.dependencies]
 fastapi = "^0.110.2"
@@ -20,6 +21,9 @@ tortoise-orm = "^0.20.0"
 
 [tool.ruff]
 line-length = 120
+exclude = [
+    "migrations/"
+]
 
 [tool.ruff.lint]
 extend-select = [
@@ -37,6 +41,17 @@ convention = "google"
 
 [tool.ruff.format]
 line-ending = "lf"
+
+[tool.aerich]
+tortoise_orm = "app.init_db.TORTOISE_ORM"
+location = "./migrations"
+src_folder = "./."
+
+[tool.mypy]
+exclude = [
+    "migrations/"
+]
+
 
 [build-system]
 requires = ["poetry-core"]
