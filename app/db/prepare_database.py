@@ -24,7 +24,7 @@ TORTOISE_ORM = {
 
 
 def prepare_database_for_app(app: FastAPI) -> None:
-    """Initialize database for the FastAPI app.
+    """Initialize db for the FastAPI app.
 
     Args:
         app: FastAPI app
