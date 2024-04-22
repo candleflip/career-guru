@@ -1,6 +1,10 @@
 up:
 	docker-compose up -d --build
 
+init-db:
+	docker-compose exec web aerich init -t app.prepare_database.TORTOISE_ORM && \
+	docker-compose exec web aerich init-db
+
 down:
 	docker-compose down --volumes
 
