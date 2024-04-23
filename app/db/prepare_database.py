@@ -13,8 +13,8 @@ TORTOISE_ORM = {
     "apps": {
         "models": {
             "models": [
-                "app.models.tortoise.vacancy_schema",
-                "app.models.tortoise.employer_schema",
+                "app.schemas.vacancy_schema",
+                "app.schemas.employer_schema",
                 "aerich.models",
             ],
             "default_connection": "default",
@@ -35,8 +35,8 @@ def prepare_database_for_app(app: FastAPI) -> None:
         db_url=settings.postgres_url,
         modules={
             "models": [
-                "app.models.tortoise.vacancy_schema",
-                "app.models.tortoise.employer_schema",
+                "app.schemas.vacancy_schema",
+                "app.schemas.employer_schema",
             ]
         },
         generate_schemas=False,
