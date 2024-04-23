@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Sergei Svechnikov <srgcandle@mail.ru>"]
 readme = "README.md"
-packages = [{include = "career_guru"}]
+packages = [{ include = "career_guru" }]
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -52,7 +52,9 @@ src_folder = "./."
 exclude = [
     "migrations/"
 ]
-
+plugins = [
+    "pydantic.mypy"
+]
 
 [build-system]
 requires = ["poetry-core"]
