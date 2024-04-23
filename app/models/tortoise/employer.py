@@ -2,6 +2,7 @@
 
 from tortoise import fields
 from tortoise.models import Model
+from tortoise.contrib.pydantic import pydantic_model_creator
 
 
 class Employer(Model):
@@ -12,3 +13,6 @@ class Employer(Model):
 
     def __str__(self) -> str:
         return self.name
+
+
+EmployerResponse = pydantic_model_creator(cls=Employer)
