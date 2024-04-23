@@ -12,13 +12,13 @@ router = APIRouter()
 
 
 @router.post("/", response_model=EmployerResponse)
-async def create_employer(payload: EmployerPayload) -> EmployerResponse:
+async def create_employer(payload: EmployerPayload) -> EmployerResponse:  # type: ignore
     employer_id = await post(payload=payload)
     response = EmployerResponse(id=employer_id, name=payload.name)
     return response
 
 
-@router.get("/", response_model=list[EmployerResponse])
-async def read_all_employers() -> list[EmployerResponse]:
+@router.get("/", response_model=list[EmployerResponse])  # type: ignore
+async def read_all_employers() -> list[EmployerResponse]:  # type: ignore
     employers = await get_all()
     return employers

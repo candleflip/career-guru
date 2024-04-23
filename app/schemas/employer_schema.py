@@ -1,7 +1,7 @@
 """Module with "Employer" tortoise model."""
 
 from tortoise import fields
-from tortoise.contrib.pydantic import pydantic_model_creator
+from tortoise.contrib.pydantic import pydantic_model_creator  # type: ignore
 from tortoise.models import Model
 
 
