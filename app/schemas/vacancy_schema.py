@@ -7,7 +7,7 @@ from app.schemas.employer_schema import Employer
 
 
 class Vacancy(Model):
-    """Model for vacancies.
+    """DB schema for vacancies.
 
     The main one.
     """
