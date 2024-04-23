@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from uuid import UUID
 
-from app.models.pydantic.employer import EmployerPayload
-from app.models.tortoise.employer import Employer
+from app.models.pydantic.employer_model import EmployerPayload
+from app.models.tortoise.employer_schema import Employer
 
 
 async def post(payload: EmployerPayload) -> UUID:
