@@ -2,7 +2,7 @@
 
 from fastapi import FastAPI
 
-from app.api import health_check
+from app.api import employer, health_check
 from app.db.prepare_database import prepare_database_for_app as prepare_db
 
 
@@ -17,6 +17,7 @@ def create_application() -> FastAPI:
     """
     application = FastAPI()
     application.include_router(router=health_check.router, tags=["health-check"])
+    application.include_router(router=employer.router, prefix="/employers", tags=["employers"])
 
     return application
 
