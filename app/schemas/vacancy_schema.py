@@ -3,7 +3,7 @@
 from tortoise import fields
 from tortoise.models import Model
 
-from app.models.tortoise.employer_schema import Employer
+from schemas.employer_schema import Employer
 
 
 class Vacancy(Model):

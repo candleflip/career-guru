@@ -3,8 +3,8 @@ from __future__ import annotations
 from fastapi import APIRouter
 
 from app.crud.employer import get_all, post
-from app.models.pydantic.employer_model import EmployerPayload
-from app.models.tortoise.employer_schema import EmployerResponse
+from app.models.employer_model import EmployerPayload
+from app.schemas.employer_schema import EmployerResponse
 
 router = APIRouter()
 
