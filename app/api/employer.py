@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter
 
-from app.crud.employer import get_all, post
+from app.crud.employer_crud import get_all, post
 from app.models.employer_model import EmployerPayload
 from app.schemas.employer_schema import EmployerResponse
 
