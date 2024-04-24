@@ -4,8 +4,8 @@ Collects, processes and prepares all settings
 """
 
 from functools import lru_cache
+from typing import Literal
 
-from pydantic import Field
 from pydantic_settings import BaseSettings
 
 
@@ -16,7 +16,7 @@ class Settings(BaseSettings):
 
     """
 
-    environment: str = Field(default="dev")
+    environment: Literal["dev", "test", "prod"] = "dev"
     postgres_url: str
 
 
