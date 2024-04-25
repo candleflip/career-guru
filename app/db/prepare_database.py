@@ -9,7 +9,7 @@ settings: Settings = get_settings()
 
 
 TORTOISE_ORM = {
-    "connections": {"default": settings.postgres_url},
+    "connections": {"default": settings.POSTGRES_URL},
     "apps": {
         "models": {
             "models": [
@@ -32,7 +32,7 @@ def prepare_database_for_app(app: FastAPI) -> None:
     """
     register_tortoise(
         app=app,
-        db_url=settings.postgres_url,
+        db_url=settings.POSTGRES_URL,
         modules={
             "models": [
                 "app.schemas.vacancy_schema",

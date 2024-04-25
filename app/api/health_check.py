@@ -15,4 +15,4 @@ def health_check(settings: Settings = Depends(get_settings)) -> dict[str, str]:
         Metadata dict if alive
 
     """
-    return {"running?": "yes", "environment": settings.environment}
+    return {"running?": "yes", "environment": settings.ENVIRONMENT}
