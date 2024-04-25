@@ -28,7 +28,7 @@ class Settings(BaseSettings):
     @computed_field  # type: ignore[misc]
     @property
     def POSTGRES_URL(self) -> str:
-        """Construct full Postgres URL"""
+        """Construct full Postgres URL."""
         return (
             f"{self.POSTGRES_SCHEMA}://"
             f"{self.POSTGRES_USER}:"
